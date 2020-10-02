@@ -1,5 +1,34 @@
 :host{
-    header{
+    div{
+        height: 40px;
+        background-color: black;
+        color: aliceblue;
         -webkit-app-region: drag;
+        div{
+            &.actions{
+                height: 100%;
+                width: 125px;
+                div{
+                    width: inherit;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: aqua !important;
+                    }
+                    mat-icon{
+                        position: relative;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        &#square{
+                            top: 8px;
+                            font-size: 23px;
+                        }
+                        &#close{
+                            top: 8px;
+                        }
+                    } 
+                }
+            }
+        }
     }
 }

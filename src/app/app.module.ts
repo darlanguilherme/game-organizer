@@ -19,6 +19,9 @@ import { DetailModule } from './detail/detail.module';
 
 import { AppComponent } from './app.component';
 
+import { MaterialModule } from './app.material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -35,6 +38,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     HomeModule,
     DetailModule,
     AppRoutingModule,
+    MaterialModule,
+    FlexLayoutModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
