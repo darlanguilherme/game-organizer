@@ -1,11 +1,13 @@
 <div class=actions fxLayout=row>
-  <div (click)="teste()">
+  <div (click)="electron.remote.getCurrentWindow().minimize()">
     <mat-icon id=minimize>minimize</mat-icon>
   </div>
-  <div>
+  <div  (click)="electron.remote.getCurrentWindow().isMaximized() ?
+  electron.remote.getCurrentWindow().unmaximize() :
+  electron.remote.getCurrentWindow().maximize()">
     <mat-icon id=square>crop_square</mat-icon>
   </div>
-  <div>
+  <div (click)="electron.remote.getCurrentWindow().close()">
     <mat-icon id=close>close</mat-icon>
   </div>
 </div>

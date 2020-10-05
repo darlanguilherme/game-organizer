@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { remote } from 'electron';
+import { ElectronService } from "../../../core/services/electron/electron.service";
 
 
 @Component({
@@ -8,11 +8,12 @@ import { remote } from 'electron';
   styleUrls: ['./titlebar-actions.component.scss']
 })
 export class TitlebarActionsComponent implements OnInit {
-  constructor() { }
+  constructor(public electron: ElectronService) { }
 
   ngOnInit(): void { }
 
-  teste(){
-    console.log(remote.getCurrentWindow().minimize())
+  teste() {
+    console.log(this.electron.remote.getCurrentWindow().isMaximized())
+
   }
 }
