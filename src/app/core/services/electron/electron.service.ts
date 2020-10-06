@@ -33,4 +33,15 @@ export class ElectronService {
       this.fs = window.require('fs');
     }
   }
+
+  public minimize(){this.remote.getCurrentWindow().minimize()}
+
+  public unmaximize(){this.remote.getCurrentWindow().unmaximize()}
+
+  public maximize(){this.remote.getCurrentWindow().maximize()}
+
+  public close(){this.remote.getCurrentWindow().close()}
+
+  public isMaximized(){return this.remote.getCurrentWindow().isMaximized()}
+  
 }

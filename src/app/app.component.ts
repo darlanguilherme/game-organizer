@@ -9,6 +9,9 @@ import { AppConfig } from '../environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  public show = true;
+
   constructor(
     private electronService: ElectronService,
     private translate: TranslateService
