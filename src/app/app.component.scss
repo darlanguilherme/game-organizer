@@ -5,4 +5,12 @@
         border-color: black !important;
         background-color: rgba(15, 15, 15, 1) !important;
       }
+      .out-sidenav-content{
+        mat-icon{
+          font-size: 40px;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+        }
+      }
 }

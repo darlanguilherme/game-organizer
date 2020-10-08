@@ -1,6 +1,6 @@
 <app-titlebar></app-titlebar>
 <mat-drawer-container class="container">
-    <mat-drawer #drawer class="sidenav-content" [resizableMinWidth]='250' resizable mode="side">
+    <mat-drawer  #drawer class="sidenav-content" [resizableMinWidth]='250' resizable mode="side">
       <p>Auto-resizing sidenav</p>
       <p *ngIf="show">Lorem, ipsum dolor sit amet consectetur.</p>
       <button (click)="show = !show" mat-raised-button>
@@ -8,10 +8,8 @@
       </button>
     </mat-drawer>
   
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-        Toggle sidenav
-      </button>
+    <div class="out-sidenav-content">
+        <mat-icon class="material-icons-sharp" id=arrowSideBar (click)="drawer.toggle()" >keyboard_arrow_right</mat-icon>
       <router-outlet></router-outlet>
     </div>
 </mat-drawer-container>
