@@ -1,8 +1,28 @@
 <div class=container fxLayout=row fxLayoutAlign='start start' >
-  <div class=side resizable  fxLayoutAlign='center start'> 
-    <h2>Organizer</h2>
+  <div class=side fxLayout=column resizable  fxLayoutAlign='center start'> 
+    <div fxLayout=row fxLayoutAlign='center center'>
+      <h2>Organizer</h2>
+      <mat-icon [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">list</mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+    </div>
+    <div fxFlex=100 fxLayout=row fxLayoutAlign='center start'>
+      <app-input></app-input>
+    </div>
   </div>
-  <div class=content >
+  <div class=content>
     <app-titlebar></app-titlebar>
     <router-outlet></router-outlet>
   </div>

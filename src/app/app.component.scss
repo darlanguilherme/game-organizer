@@ -9,10 +9,18 @@
         color: white;
         border-color: black !important;
         background-color: rgba(10, 10, 10, 1) !important;
+        div{
+          height: fit-content;
+          mat-icon{
+            padding-left: 20px;
+            font-size: 30px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+          }
+        }
       }    
-      &.content{
-
-      }
     }
   }
 }
+

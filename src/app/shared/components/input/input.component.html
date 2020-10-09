@@ -1,0 +1,6 @@
+<div fxLayout=row fxLayoutAlign='center center'>
+    <input type="text" [(ngModel)]='value' >
+    <button #clear mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+          <mat-icon >close</mat-icon>
+    </button>
+</div>
