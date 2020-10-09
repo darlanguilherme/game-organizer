@@ -11,6 +11,7 @@ import { AppConfig } from '../environments/environment';
 export class AppComponent {
 
   public show = true;
+  public widthDrawer;
 
   constructor(
     private electronService: ElectronService,
@@ -29,4 +30,5 @@ export class AppComponent {
       console.log('Run in browser');
     }
   }
+
 }

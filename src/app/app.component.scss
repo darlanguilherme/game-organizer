@@ -1,16 +1,18 @@
 :host {
-    .sidenav-content {
+  .container{
+    div{
+      height: 100%;
+      width: 100%;
+      &.side {
+        min-width: 180px;
+        max-width: 330px;
         color: white;
-        max-width: 50vw;
         border-color: black !important;
-        background-color: rgba(15, 15, 15, 1) !important;
+        background-color: rgba(10, 10, 10, 1) !important;
+      }    
+      &.content{
+
       }
-      .out-sidenav-content{
-        mat-icon{
-          font-size: 40px;
-          width: 40px;
-          height: 40px;
-          cursor: pointer;
-        }
-      }
+    }
+  }
 }

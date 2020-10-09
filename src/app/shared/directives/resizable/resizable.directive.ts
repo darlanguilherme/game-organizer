@@ -1,5 +1,5 @@
 
-import { Directive, ElementRef, OnInit, Input } from '@angular/core';
+import { Directive, ElementRef, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Directive({
   selector: '[resizable]'
@@ -8,14 +8,16 @@ import { Directive, ElementRef, OnInit, Input } from '@angular/core';
 export class ResizableDirective implements OnInit {
 
 
-  @Input() resizableGrabWidth = 1;
+  @Input() resizableGrabWidth = 2;
   @Input() resizableMinWidth = 100;
-
+  @Output() widthElement:EventEmitter<number> = new EventEmitter();
+  
   dragging = false;
 
   constructor(private el: ElementRef) {
 
     const self = this;
+    this.widthElement.next(this.el.nativeElement.offsetWidth);
 
     const EventListenerMode = { capture: true };
 
@@ -82,13 +84,16 @@ export class ResizableDirective implements OnInit {
     document.addEventListener('mouseup', mouseUpG, true);
     el.nativeElement.addEventListener('mousedown', mouseDown, true);
     el.nativeElement.addEventListener('mousemove', mouseMove, true);
+    console.log("AAAA")
   }
 
   ngOnInit(): void {
+    this.widthElement.next(this.el.nativeElement.offsetWidth);
     this.el.nativeElement.style["border-right"] = this.resizableGrabWidth + "px solid darkgrey";
   }
 
   inDragRegion(evt) {
+    this.widthElement.next(this.el.nativeElement.offsetWidth);
     return this.el.nativeElement.clientWidth - evt.clientX + this.el.nativeElement.offsetLeft < this.resizableGrabWidth;
   }
 
