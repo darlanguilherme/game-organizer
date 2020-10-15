@@ -1,12 +1,32 @@
 :host {
-    width: 100%;
- input{
-  background-color: rgb(89, 89, 89);
-  border: none;
-  border-radius: 4px;
-  height: 30px;
-  outline: none !important;
-width: 80%;
-color: white;
- }
+  width: 100%;
+  .div-input {
+    width: 80%;
+    background-color: rgb(89, 89, 89);
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+    input {
+      outline: none !important;
+      width: 80%;
+      color: white;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      height: 28px;
+      font-size: 17px;
+    }
+    button {
+      cursor: pointer !important;
+      padding: 0;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      mat-icon {
+        top: 4px;
+        right: 3px;
+        position: absolute;
+      }
+    }
+  }
 }

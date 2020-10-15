@@ -1,5 +1,5 @@
 <div class=container fxLayout=row fxLayoutAlign='start start' >
-  <div class=side fxLayout=column resizable  fxLayoutAlign='center start'> 
+  <div class=side fxLayout=column resizable  fxLayoutAlign='center start'>
     <div fxLayout=row fxLayoutAlign='center center'>
       <h2>Organizer</h2>
       <mat-icon [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">list</mat-icon>
@@ -18,8 +18,9 @@
         </button>
       </mat-menu>
     </div>
-    <div fxFlex=100 fxLayout=row fxLayoutAlign='center start'>
+    <div fxFlex=100 fxLayout=column fxLayoutAlign='start center'>
       <app-input></app-input>
+      <app-sidenav-list></app-sidenav-list>
     </div>
   </div>
   <div class=content>

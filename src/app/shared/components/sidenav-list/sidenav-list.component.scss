@@ -1,0 +1,13 @@
+:host {
+  width: 100%;
+  margin-top: 20px !important;
+  mat-list-option {
+    color: white;
+    &:hover {
+      background-color: rgba(191, 191, 191, 0.15);
+    }
+    &.mat-list-single-selected-option {
+      background-color: rgba(191, 191, 191, 0.15);
+    }
+  }
+}
