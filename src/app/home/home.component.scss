@@ -1,3 +1,19 @@
 :host {
-  
+  .teste {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: stretch;
+    justify-content: space-around;
+    .game {
+      height: 250px;
+      width: 190px;
+      background-color: yellow;
+      border: solid 1px red;
+      margin: 13px;
+    }
+  }
 }
