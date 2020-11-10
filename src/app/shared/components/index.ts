@@ -4,3 +4,4 @@ export * from './titlebar/titlebar.component';
 export * from './toolbar/page-not-found.component';
 export * from './sidenav-list/sidenav-list.component';
 export * from './titlebar-actions/titlebar-actions.component';
+export * from './games-list/games-list.component';
