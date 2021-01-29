@@ -1,8 +1,9 @@
 <div fxLayout=row fxLayoutAlign='center center'>
-  <div class=div-input>
+  <!-- <div class=div-input>
     <input type="text" [(ngModel)]='value' placeholder="Pesquisar">
     <button #clear mat-button *ngIf="value" mat-icon-button aria-label="Clear" (click)="value=''">
       <mat-icon>close</mat-icon>
     </button>
-  </div>
+  </div> -->
+  <po-input p-placeholder=Pesquisar p-clean=true p-icon="po-icon po-icon-search"></po-input>
 </div>

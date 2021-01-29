@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
-import { PoButtonModule } from '@po-ui/ng-components';
+import {
+  PoButtonModule,
+  PoFieldModule,
+  PoDialogModule
+} from '@po-ui/ng-components';
 
 @NgModule({
   imports: [
-    PoButtonModule
+    PoButtonModule,
+    PoFieldModule,
+    PoDialogModule
   ],
   exports: [
-    PoButtonModule
+    PoButtonModule,
+    PoFieldModule,
+    PoDialogModule
   ]
 })
 export class PouiModule { }
