@@ -20,9 +20,12 @@ import { DetailModule } from './detail/detail.module';
 import { AppComponent } from './app.component';
 
 import { MaterialModule } from './app.material.module';
+import { PouiModule } from './app.poui.module';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PoModule } from '@po-ui/ng-components';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -41,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     DetailModule,
     AppRoutingModule,
     MaterialModule,
+    PouiModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
@@ -49,7 +53,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    PoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
