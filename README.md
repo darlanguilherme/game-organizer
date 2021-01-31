@@ -1,1 +1,1 @@
-Organizador de jogos
+Organizador de jogoss
