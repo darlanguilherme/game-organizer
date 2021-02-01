@@ -17,10 +17,9 @@ export class DatabaseService {
 
       const low = window.require('lowdb');
       const FileSync = window.require('lowdb/adapters/FileSync');
-
       const adapter = new FileSync('db.json')
-      this.db = low(adapter)
 
+      this.db = low(adapter);
       this.db.defaults({
         emulators: [],
         games: [],

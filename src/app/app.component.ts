@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { ElectronService, DatabaseService } from './core/services';
 import { TranslateService } from '@ngx-translate/core';
 import { AppConfig } from '../environments/environment';
 import { PoDialogAlertLiterals, PoDialogConfirmLiterals, PoDialogOptions, PoDialogService } from '@po-ui/ng-components';
-
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { RegisterGameComponent } from "./shared/components/";
 
 
 @Component({
@@ -33,7 +34,8 @@ export class AppComponent {
     private DatabaseService: DatabaseService,
     private electronService: ElectronService,
     private translate: TranslateService,
-    private poAlert: PoDialogService
+    private poAlert: PoDialogService,
+    public dialog: MatDialog
   ) {
 
 
@@ -52,12 +54,12 @@ export class AppComponent {
   }
 
   public abrir() {
-    this.poAlert.alert({
-      literals: this.literalsAlert,
-      title: this.title,
-      message: this.message,
-      ok: () => (this.actionOptions.includes('ok') ? (this.action = 'OK') : undefined)
+    this.dialog.open(RegisterGameComponent, {
+      data: {
+        animal: 'panda'
+      }
     });
   }
 
 }
+

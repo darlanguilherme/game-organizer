@@ -1,30 +1,19 @@
 import 'reflect-metadata';
 import '../polyfills';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
-
-import { RouterModule, Routes } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
-
 // NG Translate
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { HomeModule } from './home/home.module';
-
 import { AppComponent } from './app.component';
-
 import { MaterialModule } from './app.material.module';
 import { PouiModule } from './app.poui.module';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PoModule } from '@po-ui/ng-components';
 
