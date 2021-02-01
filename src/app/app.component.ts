@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { ElectronService } from './core/services';
+import { ElectronService, DatabaseService } from './core/services';
 import { TranslateService } from '@ngx-translate/core';
 import { AppConfig } from '../environments/environment';
 import { PoDialogAlertLiterals, PoDialogConfirmLiterals, PoDialogOptions, PoDialogService } from '@po-ui/ng-components';
+
+
 
 @Component({
   selector: 'app-root',
@@ -21,17 +23,20 @@ export class AppComponent {
   literals: string;
   literalsAlert: PoDialogAlertLiterals;
   literalsConfirm: PoDialogConfirmLiterals;
-  poAlertOptions: PoDialogOptions = {
-    title:"Cadastro de jogos"
+  poAlertOptions = {
+    title: "Cadastro de jogos"
   }
   message: string;
   title: string;
 
   constructor(
+    private DatabaseService: DatabaseService,
     private electronService: ElectronService,
     private translate: TranslateService,
     private poAlert: PoDialogService
   ) {
+
+
 
     this.translate.setDefaultLang('en');
     console.log('AppConfig', AppConfig);

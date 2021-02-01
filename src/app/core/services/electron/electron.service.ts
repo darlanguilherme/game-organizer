@@ -15,6 +15,8 @@ export class ElectronService {
   remote: typeof remote;
   childProcess: typeof childProcess;
   fs: typeof fs;
+  // adapter = new FileSync('db.json')
+  // db = low(this.adapter)
 
   get isElectron(): boolean {
     return !!(window && window.process && window.process.type);
@@ -23,6 +25,7 @@ export class ElectronService {
   constructor() {
     // Conditional imports
     if (this.isElectron) {
+      console.log("3333333333333333333")
       this.ipcRenderer = window.require('electron').ipcRenderer;
       this.webFrame = window.require('electron').webFrame;
 
@@ -31,17 +34,27 @@ export class ElectronService {
 
       this.childProcess = window.require('child_process');
       this.fs = window.require('fs');
+
+      // const low = window.require('lowdb');
+      // const FileSync = window.require('lowdb/adapters/FileSync');
+
+      // const adapter = new FileSync('db.json')
+      // const db = low(adapter)
+
+      // db.defaults({ posts: ['aaaa'], user: {} })
+      //   .write()
     }
+
   }
 
-  public minimize(){this.remote.getCurrentWindow().minimize()}
+  public minimize() { this.remote.getCurrentWindow().minimize() }
 
-  public unmaximize(){this.remote.getCurrentWindow().unmaximize()}
+  public unmaximize() { this.remote.getCurrentWindow().unmaximize() }
 
-  public maximize(){this.remote.getCurrentWindow().maximize()}
+  public maximize() { this.remote.getCurrentWindow().maximize() }
 
-  public close(){this.remote.getCurrentWindow().close()}
+  public close() { this.remote.getCurrentWindow().close() }
 
-  public isMaximized(){return this.remote.getCurrentWindow().isMaximized()}
-  
+  public isMaximized() { return this.remote.getCurrentWindow().isMaximized() }
+
 }

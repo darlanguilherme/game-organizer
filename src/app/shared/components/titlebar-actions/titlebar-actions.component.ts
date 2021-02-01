@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ElectronService } from "../../../core/services/electron/electron.service";
+import { DatabaseService } from "../../../core/services/database/database.service";
 
 
 @Component({
@@ -8,6 +9,7 @@ import { ElectronService } from "../../../core/services/electron/electron.servic
   styleUrls: ['./titlebar-actions.component.scss']
 })
 export class TitlebarActionsComponent implements OnInit {
+
   constructor(public electron: ElectronService) { }
 
   ngOnInit(): void { }

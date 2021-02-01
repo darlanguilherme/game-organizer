@@ -27,6 +27,7 @@ function createWindow(): BrowserWindow {
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
+      allowRunningInsecureContent: (serve)
     },
 
     // webPreferences: {
