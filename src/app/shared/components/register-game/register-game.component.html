@@ -1,7 +1,4 @@
-<div mat-dialog-title>
-  <h1>Dialog with elements</h1>
-</div>
-
+<h1>Cadastrar jogo</h1>
 <mat-dialog-content>
   <form class=form mat-dialog-content [formGroup]="game">
 
@@ -33,11 +30,7 @@
       <po-input fxFlex=50 p-label=Imagem p-required="true" formControlName="srcImage"></po-input>
     </div>
 
-    <div>
-      <span>Choose file</span>
-      <span>{{file ? file.name : 'or drag and drop file here' }}</span>
-      <input class="file-input" type="file">
-    </div>
+    <!-- <app-input-image></app-input-image> -->
 
   </form>
 </mat-dialog-content>

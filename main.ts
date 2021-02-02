@@ -45,7 +45,7 @@ function createWindow(): BrowserWindow {
     require('electron-reload')(__dirname, {
       electron: require(`${__dirname}/node_modules/electron`)
     });
-    win.loadURL('http://localhost:4200');
+    win.loadURL('http://localhost:4000');
 
   } else {
     win.loadURL(url.format({

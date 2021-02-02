@@ -1,10 +1,16 @@
-mat-dialog-content {
-    height: calc(100% - 96px);
+:host {
+  mat-dialog-content {
+    height: calc(100% - 80px);
+    overflow-y: hidden !important;
     .div-input {
-        width: 100%;
-        po-input,
-        po-datepicker {
-            margin: 5px 20px 5px 20px;
-        }
+      width: 100%;
+      po-input,
+      po-datepicker {
+        margin: 5px 20px 5px 20px;
+      }
     }
+  }
+  h1 {
+    margin: 5px 20px 20px 17px;
+  }
 }
