@@ -1,22 +1,23 @@
 export interface IDbUser {
+  idUser: string;
   name: string;
   avatar: string;
   theme: string;
 }
 
 export interface IDbGames {
-  id: string,
+  idGame: string,
   name: string,
   description: string,
   launchDate: string,
   registerDate: string,
   tags: Array<string>,
   srcImage: string,
-  emulator: string
+  idEmulator: string
 }
 
 export interface IDbEmulators {
-  id: string,
+  idEmulador: string,
   name: string,
   description: string,
   registerDate: string,

@@ -54,11 +54,17 @@ export class AppComponent {
   }
 
   public abrir() {
-    this.dialog.open(RegisterGameComponent, {
+    const dialog = this.dialog.open(RegisterGameComponent, {
       data: {
         animal: 'panda'
-      }
+      },
+      panelClass: 'register-game-dialog'
     });
+
+    dialog.afterClosed().subscribe(result => {
+      console.log("Result aqui: ", result)
+
+    })
   }
 
 }

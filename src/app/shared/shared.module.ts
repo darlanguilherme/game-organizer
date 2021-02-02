@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { PageNotFoundComponent, TitlebarComponent, TitlebarActionsComponent, SidenavComponent, InputComponent, SidenavListComponent, GamesListComponent, RegisterGameComponent } from './components/';
 import { WebviewDirective, ResizableDirective } from './directives/';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from "../app.material.module";
 import { PouiModule } from "../app.poui.module";
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -25,6 +25,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     TranslateModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
     PouiModule,
     FlexLayoutModule
@@ -33,7 +34,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     TranslateModule,
     WebviewDirective,
     ResizableDirective,
-    FormsModule, TitlebarComponent,
+    FormsModule,
+    ReactiveFormsModule,
+    TitlebarComponent,
     TitlebarActionsComponent,
     SidenavComponent,
     InputComponent,

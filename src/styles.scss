@@ -12,6 +12,13 @@ body {
   .mat-list-text {
     padding-left: 8% !important;
   }
+
+  .register-game-dialog {
+    height: 80vh;
+    max-height: 700px;
+    width: 85vw !important;
+    max-width: 900px !important;
+  }
 }
 
 /* CAN (MUST) BE REMOVED ! Sample Global style */
