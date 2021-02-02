@@ -10,6 +10,8 @@ import { PoCheckboxGroupOption } from '@po-ui/ng-components';
 })
 export class RegisterGameComponent implements OnInit {
 
+  file = null
+
   public game: FormGroup = new FormGroup({
     id: new FormControl(''),
     name: new FormControl(''),
@@ -27,7 +29,13 @@ export class RegisterGameComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  onSubmit(game) {
-    console.log("GAME: ", game)
+  save() {
+    console.log("Save")
   }
+
+  cancel() {
+    console.log("Cancel")
+  }
+  
+
 }

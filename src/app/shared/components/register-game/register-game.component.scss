@@ -1,9 +1,10 @@
-.div-input{
-    width: 100%;
-    po-input,po-datepicker{
-        margin: 5px 20px 5px 20px;
+mat-dialog-content {
+    height: calc(100% - 96px);
+    .div-input {
+        width: 100%;
+        po-input,
+        po-datepicker {
+            margin: 5px 20px 5px 20px;
+        }
     }
-}
-.div-actions{
-    
 }

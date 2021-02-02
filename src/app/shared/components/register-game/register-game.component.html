@@ -3,7 +3,7 @@
 </div>
 
 <mat-dialog-content>
-  <form mat-dialog-content (ngSubmit)="onSubmit(game)" [formGroup]="game">
+  <form class=form mat-dialog-content [formGroup]="game">
 
     <div class=div-input fxLayout=row fxLayoutAlign='center center'>
       <po-input fxFlex=50 p-label=Identificador p-placeholder="Ex: ps1" p-auto-focus="true" p-required="true"
@@ -26,18 +26,22 @@
       </po-datepicker>
       <po-datepicker fxFlex=50 formControlName="registerDate" p-format="dd/mm/yyyy" p-label="Data do cadastro">
       </po-datepicker>
-      <!-- <po-input fxFlex=50 p-label="Data de lançamento" p-required="true" formControlName="launchDate"></po-input> -->
-      <!-- <po-input fxFlex=50 p-label="Data do cadastro" p-required="true" formControlName="registerDate"></po-input> -->
     </div>
 
     <div class=div-input fxLayout=row fxLayoutAlign='center center'>
-      <po-input fxFlex=50 p-label=Imagem p-required="true" formControlName="srcImage"></po-input>
       <po-input fxFlex=50 p-label=Tags p-required="true" formControlName="tags"></po-input>
+      <po-input fxFlex=50 p-label=Imagem p-required="true" formControlName="srcImage"></po-input>
+    </div>
+
+    <div>
+      <span>Choose file</span>
+      <span>{{file ? file.name : 'or drag and drop file here' }}</span>
+      <input class="file-input" type="file">
     </div>
 
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <po-button class="po-md-3" type="submit" p-label="Sample Restore">Cancelar </po-button>
-  <po-button class="po-md-3" type="submit" p-label="Sample Restore">Salvar </po-button>
+  <po-button class="po-md-3" (p-click)="cancel()" p-label="Cancelar"> </po-button>
+  <po-button class="po-md-3" (p-click)="save()" p-label="Salvar"> </po-button>
 </mat-dialog-actions>
