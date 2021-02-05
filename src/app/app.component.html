@@ -3,20 +3,7 @@
     <div fxLayout=row fxLayoutAlign='center center'>
       <h2>Organizer</h2>
       <mat-icon [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">list</mat-icon>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="abrir()">
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voice mail</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
-        </button>
-      </mat-menu>
+      
     </div>
     <div fxFlex=100 fxLayout=column fxLayoutAlign='start center'>
       <app-input></app-input>

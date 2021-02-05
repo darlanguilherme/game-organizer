@@ -1,62 +1,65 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
-import { WebviewDirective, ResizableDirective } from './directives/';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from "../app.material.module";
 import { PouiModule } from "../app.poui.module";
+import { TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialModule } from "../app.material.module";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WebviewDirective, ResizableDirective } from './directives/';
 
 import {
-  PageNotFoundComponent,
-  TitlebarComponent,
-  TitlebarActionsComponent,
-  SidenavComponent,
   InputComponent,
-  SidenavListComponent,
+  SidenavComponent,
+  MenuListComponent,
+  TitlebarComponent,
   GamesListComponent,
+  InputImageComponent,
+  SidenavListComponent,
   RegisterGameComponent,
-  InputImageComponent
+  PageNotFoundComponent,
+  TitlebarActionsComponent,
 } from './components/';
 
 @NgModule({
   declarations: [
-    PageNotFoundComponent,
-    TitlebarComponent,
-    TitlebarActionsComponent,
-    SidenavComponent,
     InputComponent,
-    SidenavListComponent,
-    GamesListComponent,
     WebviewDirective,
+    SidenavComponent,
+    MenuListComponent,
+    TitlebarComponent,
+    GamesListComponent,
     ResizableDirective,
+    InputImageComponent,
+    SidenavListComponent,
+    PageNotFoundComponent,
     RegisterGameComponent,
-    InputImageComponent
+    TitlebarActionsComponent,
   ],
   imports: [
-    CommonModule,
-    TranslateModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MaterialModule,
     PouiModule,
-    FlexLayoutModule
+    FormsModule,
+    CommonModule,
+    MaterialModule,
+    TranslateModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
   ],
   exports: [
-    TranslateModule,
-    WebviewDirective,
-    ResizableDirective,
     FormsModule,
-    ReactiveFormsModule,
-    TitlebarComponent,
-    TitlebarActionsComponent,
-    SidenavComponent,
     InputComponent,
-    SidenavListComponent,
+    TranslateModule,
+    SidenavComponent,
+    WebviewDirective,
+    MenuListComponent,
+    TitlebarComponent,
+    ResizableDirective,
     GamesListComponent,
+    ReactiveFormsModule,
+    InputImageComponent,
+    SidenavListComponent,
     PageNotFoundComponent,
     RegisterGameComponent,
-    InputImageComponent
+    TitlebarActionsComponent,
   ]
 })
 export class SharedModule { }

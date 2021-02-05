@@ -38,8 +38,6 @@ export class AppComponent {
     public dialog: MatDialog
   ) {
 
-
-
     this.translate.setDefaultLang('en');
     console.log('AppConfig', AppConfig);
 
@@ -63,7 +61,6 @@ export class AppComponent {
 
     dialog.afterClosed().subscribe(result => {
       console.log("Result aqui: ", result)
-
     })
   }
 
