@@ -16,6 +16,7 @@ import { PouiModule } from './app.poui.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PoModule } from '@po-ui/ng-components';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -35,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     PouiModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
+    AngularSvgIconModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

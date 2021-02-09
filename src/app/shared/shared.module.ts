@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PouiModule } from "../app.poui.module";
 import { TranslateModule } from '@ngx-translate/core';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from "../app.material.module";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -43,6 +44,7 @@ import {
     TranslateModule,
     FlexLayoutModule,
     ReactiveFormsModule,
+    AngularSvgIconModule,
   ],
   exports: [
     FormsModule,

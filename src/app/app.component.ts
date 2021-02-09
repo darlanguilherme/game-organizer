@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { AppConfig } from '../environments/environment';
 import { PoDialogAlertLiterals, PoDialogConfirmLiterals, PoDialogOptions, PoDialogService } from '@po-ui/ng-components';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { RegisterGameComponent } from "./shared/components/";
+
 
 
 @Component({
@@ -49,19 +49,6 @@ export class AppComponent {
     } else {
       console.log('Run in browser');
     }
-  }
-
-  public abrir() {
-    const dialog = this.dialog.open(RegisterGameComponent, {
-      data: {
-        animal: 'panda'
-      },
-      panelClass: 'register-game-dialog'
-    });
-
-    dialog.afterClosed().subscribe(result => {
-      console.log("Result aqui: ", result)
-    })
   }
 
 }

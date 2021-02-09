@@ -8,3 +8,4 @@ export * from './input-image/input-image.component';
 export * from './sidenav-list/sidenav-list.component';
 export * from './register-game/register-game.component';
 export * from './titlebar-actions/titlebar-actions.component';
+export * from './register-emulator/register-emulator.component';

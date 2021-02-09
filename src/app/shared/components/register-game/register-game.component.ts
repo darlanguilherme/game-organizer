@@ -11,7 +11,7 @@ import { PoCheckboxGroupOption } from '@po-ui/ng-components';
 export class RegisterGameComponent implements OnInit {
 
   public game: FormGroup = new FormGroup({
-    id: new FormControl(''),
+    idGame: new FormControl(''),
     name: new FormControl(''),
     description: new FormControl(''),
     launchDate: new FormControl(''),
