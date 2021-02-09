@@ -1,3 +1,10 @@
-:host {
-
+button {
+    width: 180px !important;
+    height: 100%;
+    padding: 0 !important;
+    .div-icon {
+        width: 50px;
+        height: 100%;
+        padding: 0px 5px 0px 5px;
+    }
 }
