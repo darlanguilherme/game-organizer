@@ -1,0 +1,33 @@
+<h1>Cadastrar jogo</h1>
+<mat-dialog-content>
+  <form class=form mat-dialog-content [formGroup]="game">
+    <div class=div-input fxLayout=row fxLayoutAlign='center center'>
+      <po-input fxFlex=50 p-label=Identificador p-placeholder="Ex: ps1" p-auto-focus="true" p-required="true"
+        formControlName="id">
+      </po-input>
+      <po-input fxFlex=50 p-label="Identificador do emulador" p-placeholder="Ex: psx" p-required="true"
+        formControlName="idEmulator">
+      </po-input>
+    </div>
+    <div class=div-input fxLayout=row fxLayoutAlign='center center'>
+      <po-input fxFlex=50 p-label=Nome p-placeholder="Ex: Resident Evil" p-required=true formControlName="name">
+      </po-input>
+      <po-input fxFlex=50 p-label=Descrição p-placeholder="Ex: Jogo de terror" formControlName="description">
+      </po-input>
+    </div>
+    <div class=div-input fxLayout=row fxLayoutAlign='center center'>
+      <po-datepicker fxFlex=50 formControlName="launchDate" p-format="dd/mm/yyyy" p-label="Data de lançamento">
+      </po-datepicker>
+      <po-datepicker fxFlex=50 formControlName="registerDate" p-format="dd/mm/yyyy" p-label="Data do cadastro">
+      </po-datepicker>
+    </div>
+    <div class=div-input fxLayout=row fxLayoutAlign='center center'>
+      <po-input fxFlex=50 p-label=Tags p-required="true" formControlName="tags"></po-input>
+      <po-input fxFlex=50 p-label=Imagem p-required="true" formControlName="srcImage"></po-input>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <po-button class="po-md-3" (p-click)="cancel()" p-label="Cancelar"> </po-button>
+  <po-button class="po-md-3" (p-click)="save()" p-label="Salvar"> </po-button>
+</mat-dialog-actions>
