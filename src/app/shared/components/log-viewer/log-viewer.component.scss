@@ -1,0 +1,11 @@
+:host {
+  mat-dialog-content {
+    height: calc(100% - 120px);
+    overflow-y: hidden !important;
+    background-color: rgb(58, 58, 58);
+    margin: 0;
+  }
+  h1 {
+    margin: 5px 20px 20px 17px;
+  }
+}
