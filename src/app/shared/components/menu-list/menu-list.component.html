@@ -1,27 +1,27 @@
 <mat-icon [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">list</mat-icon>
 <mat-menu #menu="matMenu" fxLayout=column fxLayoutAlign='center center'>
-  <button mat-menu-item (click)="openRegisterGame()" fxLayout=row fxLayoutAlign='start center'>
+  <button mat-menu-item (click)="openDialog(RegisterGameComponent)" fxLayout=row fxLayoutAlign='start center'>
     <div class=div-icon>
       <svg-icon src="../../../../assets/icons/controller.svg"
         [svgStyle]="{ 'width.px':27,'height.px':27, 'fill':'red','margin-left.px':8,'margin-top.px':10 }"></svg-icon>
     </div>
     <span>Cadastrar jogo</span>
   </button>
-  <button mat-menu-item (click)="openRegisterEmulator()" fxLayout=row fxLayoutAlign='start center'>
+  <button mat-menu-item (click)="openDialog(RegisterEmulatorComponent)" fxLayout=row fxLayoutAlign='start center'>
     <div class=div-icon>
       <svg-icon src="../../../../assets/icons/emulator.svg"
         [svgStyle]="{ 'width.px':18,'height.px':18, 'fill':'red','margin-left.px':11,'margin-top.px':10}"></svg-icon>
     </div>
     <span>Cadastrar emulador</span>
   </button>
-  <button mat-menu-item (click)="openRegisterGame()" fxLayout=row fxLayoutAlign='start center'>
+  <button mat-menu-item (click)="openDialog(LogViewerComponent)" fxLayout=row fxLayoutAlign='start center'>
     <div class=div-icon>
       <svg-icon src="../../../../assets/icons/terminal.svg"
         [svgStyle]="{ 'width.px':23,'height.px':23, 'fill':'red','margin-left.px':8,'margin-top.px':10 }"></svg-icon>
     </div>
     <span>Logs</span>
   </button>
-  <button mat-menu-item (click)="openRegisterGame()" fxLayout=row fxLayoutAlign='start center'>
+  <button mat-menu-item  fxLayout=row fxLayoutAlign='start center'>
     <div class=div-icon>
       <svg-icon src="../../../../assets/icons/gear.svg"
         [svgStyle]="{ 'width.px':23,'height.px':23, 'fill':'red','margin-left.px':8,'margin-top.px':10 }"></svg-icon>

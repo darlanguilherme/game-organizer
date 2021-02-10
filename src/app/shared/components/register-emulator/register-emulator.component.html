@@ -1,13 +1,11 @@
 <h1>Cadastrar jogo</h1>
 <mat-dialog-content>
-  <form class=form mat-dialog-content [formGroup]="game">
+  <form class=form mat-dialog-content [formGroup]="emulator">
     <div class=div-input fxLayout=row fxLayoutAlign='center center'>
       <po-input fxFlex=50 p-label=Identificador p-placeholder="Ex: ps1" p-auto-focus="true" p-required="true"
-        formControlName="id">
+        formControlName="idEmulador">
       </po-input>
-      <po-input fxFlex=50 p-label="Identificador do emulador" p-placeholder="Ex: psx" p-required="true"
-        formControlName="idEmulator">
-      </po-input>
+
     </div>
     <div class=div-input fxLayout=row fxLayoutAlign='center center'>
       <po-input fxFlex=50 p-label=Nome p-placeholder="Ex: Resident Evil" p-required=true formControlName="name">

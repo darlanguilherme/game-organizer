@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 html,
 body {
+  overflow: hidden !important;
+
   margin: 0;
   padding: 0;
 
@@ -15,7 +17,7 @@ body {
 
   .register-game-dialog {
     height: 80vh;
-    max-height: 700px;
+    max-height: 65vh;
     width: 85vw !important;
     max-width: 900px !important;
   }

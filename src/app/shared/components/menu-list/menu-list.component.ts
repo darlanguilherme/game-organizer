@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RegisterGameComponent } from "../../../shared/components/";
+import { RegisterGameComponent, RegisterEmulatorComponent, LogViewerComponent } from "../../../shared/components/";
 
 @Component({
   selector: 'app-menu-list',
@@ -9,19 +9,15 @@ import { RegisterGameComponent } from "../../../shared/components/";
 })
 export class MenuListComponent implements OnInit {
 
+  LogViewerComponent = LogViewerComponent;
+  RegisterGameComponent = RegisterGameComponent;
+  RegisterEmulatorComponent = RegisterEmulatorComponent;
+
   public file = null;
 
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void { }
-
-  public openRegisterGame() {
-    this.openDialog(RegisterGameComponent);
-  }
-
-  public openRegisterEmulator() {
-    this.openDialog(RegisterGameComponent);
-  }
 
   public openDialog(component) {
     const dialog = this.dialog.open(component, {
